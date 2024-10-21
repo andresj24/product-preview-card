@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    /* outline: 1px solid red;  */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    background-color: var(--cream);
+}
+
+.container {
+    width: 70rem;
+    max-width: 100%;
+    min-height: 97vh;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.image {
+    width: 30rem;
+    max-width: 100%;
+    height: 45rem;
+    max-height: 100%;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.info {
+    width: 30rem;
+    max-width: 100%;
+    height: 45rem;
+    max-height: 100%;
+    padding: 2rem 3rem;
+    background-color: var(--white);
+    border-radius: 0 10px 10px 0;
+}
+
+.info h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.info h1 {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.info p {
+    line-height: 1.5;
+}
+
+.info .price {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.info .price .offer {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    margin: 0;
+}
+
+.info .price .regular {
+    margin-left: 2.5rem;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+.info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    background-color: var(--dark-cyan);
+    margin-top: 1.5rem;
+    border-radius: 10px;
+}
+
+.info a:hover {
+    background-color: hsl(158, 79%, 9%);
+}
+
+.info a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.info a p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .image {
+        width: 35rem;
+        min-width: 32rem;
+        height: 24.5rem;
+        background-image: url(../images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 10px 10px 0 0;
+    }
+    .info {
+            width: 35rem;
+            min-width: 32rem;
+            height: auto;
+            border-radius: 0 0 10px 10px;
+            padding: 2rem;
+        }
+
+    
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
